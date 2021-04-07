@@ -15,7 +15,6 @@ session_start();
                 <!-- jquery cdn  -->
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         </head>
-        <!-- receive message from web1 -->
         <script>
         function receiveMessage(event)
         {
@@ -37,7 +36,5 @@ session_start();
                 <!-- <iframe style="display:none;" src="https://softaims-test2.herokuapp.com/getlocalstorage.html" id="ifr"></iframe> -->
 
         </body>
-
-         
         
 </html>
