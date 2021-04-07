@@ -42,9 +42,9 @@ function setCookie(cname,cvalue,exdays)
 
         $.ajax({
         type: "POST",
-        url: "../php_API/get.php", 
+        url: "https://softaims-test.herokuapp.com/request.php", 
         data:{
-                request: "https://softaims-test.herokuapp.com/request.php"
+                boxColor: cvalue
         },
         success: function(response){
               
