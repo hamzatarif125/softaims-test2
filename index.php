@@ -15,7 +15,15 @@ session_start();
                 <!-- jquery cdn  -->
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         </head>
-        
+        <!-- receive message from web1 -->
+        <script>
+        function receiveMessage(event)
+        {
+                $("#colorInput").val(event.data);
+                colorPicked();
+        }
+        window.addEventListener("message", receiveMessage, false);
+        </script>
         <body onload="loadCookieValues()">
 
                 <h3>Web2</h3>
@@ -31,15 +39,6 @@ session_start();
 
         </body>
 
-         <!-- receive message from web1 -->
-         <script>
-        function receiveMessage(event)
-        {
-                $("#colorInput").val(event.data);
-                colorPicked();
-                $("#colorBox").css("background-color", event.data);
-        }
-        window.addEventListener("message", receiveMessage, false);
-        </script>
+         
         
 </html>
