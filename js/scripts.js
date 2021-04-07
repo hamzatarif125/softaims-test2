@@ -23,7 +23,7 @@ function loadCookieValues()
     var color = "";
     $.ajax({
         type: "GET",
-        url: "./request.php", 
+        url: "request.php", 
         data:{
                 getColor: "Yes"
         },
