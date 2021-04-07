@@ -18,10 +18,14 @@ session_start();
         <script>
         function receiveMessage(event)
         {
-                $("#colorBox").css("background-color", event.data);
+                if(event.data!=null)
+                {
+                        $("#colorBox").css("background-color", event.data);
+                }
         }
         window.addEventListener("message", receiveMessage, false);
         </script>
+        
         <body onload="loadCookieValues()">
 
                 <h3>Web2</h3>
@@ -33,7 +37,7 @@ session_start();
                 <br/>
                 <!-- color display box -->
                 <div id="colorBox" class="colorBox"></div>
-                <!-- <iframe style="display:none;" src="https://softaims-test2.herokuapp.com/getlocalstorage.html" id="ifr"></iframe> -->
+                
 
         </body>
         
