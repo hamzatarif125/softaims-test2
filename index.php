@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
         <head>
@@ -26,4 +29,20 @@
                 <div id="colorBox" class="colorBox"></div>
 
         </body>
+        <script type="text/javascript">
+                var currentSessionValue = <?php echo $_SESSION['something']; ?>;
+                // pseudo code
+                setTimeout(checkVariableValue, 5000);
+                function checkVariableValue() {
+                        $.ajax({
+                        url: 'checkMyValue.php',
+                        success: function(newVal) {
+                                if (newVal != currentSessionValue);
+                                currentSessionValue = newVal;
+                                alert('Value Has Changed.');
+                                doSomethingDifferent_or_refreshPage();
+                                }
+                        });
+                }
+        </script>
 </html>
