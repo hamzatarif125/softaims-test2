@@ -19,8 +19,7 @@ session_start();
         <script>
         function receiveMessage(event)
         {
-                $("#colorInput").val(event.data);
-                colorPicked();
+                $("#colorBox").css("background-color", event.data);
         }
         window.addEventListener("message", receiveMessage, false);
         </script>
