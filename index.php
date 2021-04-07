@@ -20,7 +20,6 @@ session_start();
         {
                 $("#colorInput").val(event.data);
                 colorPicked();
-                alert("jhj");
                 
         }
         window.addEventListener("message", receiveMessage, false);
