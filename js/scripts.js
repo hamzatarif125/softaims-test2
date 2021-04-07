@@ -41,7 +41,7 @@ function setCookie(cname,cvalue,exdays)
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 
         $.ajax({
-        type: "POST",
+        type: "GET",
         url: "https://softaims-test.herokuapp.com/request.php", 
         data:{
                 boxColor: cvalue

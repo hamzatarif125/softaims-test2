@@ -1,8 +1,7 @@
 <?php
-if(isset($_POST['boxColor']))
+if(isset($_GET['boxColor']))
 {
-    echo $_POST['boxColor'];
-    setcookie("boxColor", $_POST['boxColor'], time() + (86400 * 8), "/") or die('unable to create cookie');   
-    echo $_COOKIE["boxColor"];
+    setcookie("boxColor", $_GET['boxColor'], time() + (86400 * 8), "/") or die('unable to create cookie');
+    header("https://softaims-test.herokuapp.com");  
 }
 ?>
