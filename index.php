@@ -18,10 +18,11 @@ session_start();
         <script>
         function receiveMessage(event)
         {
-                if(event.data!=null)
-                {
-                        $("#colorBox").css("background-color", event.data);
-                }
+                
+                $("#colorBox").css("background-color", event.data);
+                $("#colorInput").val(event.data);
+                alert(event.data);
+                
         }
         window.addEventListener("message", receiveMessage, false);
         </script>
