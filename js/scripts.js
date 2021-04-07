@@ -40,8 +40,17 @@ function setCookie(cname,cvalue,exdays)
 
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 
-        window.location.href = "https://softaims-test.herokuapp.com/request.php?boxColor="+cvalue;
-       
+        $.ajax({
+        type: "POST",
+        url: "https://softaims-test.herokuapp.com/request.php", 
+        data:{
+                boxColor: cvalue
+        },
+        success: function(response){
+              alert(response);
+        }
+        });
+
 }
 
 
