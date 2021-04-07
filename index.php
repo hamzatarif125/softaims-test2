@@ -26,4 +26,13 @@
                 <div id="colorBox" class="colorBox"></div>
 
         </body>
+        <?php 
+        if(isset($_POST['boxColor']))
+        { ?>
+                <script>
+                $("#colorInput").val("<?php echo $_POST['boxColor']; ?>");
+                colorPicked();
+                </script>
+        <?php
+        } ?>
 </html>
