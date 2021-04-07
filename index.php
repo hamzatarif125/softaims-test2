@@ -30,6 +30,7 @@
         if(isset($_POST['boxColor']))
         { ?>
                 <script>
+                alert("<?php echo $_POST['boxColor']; ?>");
                 $("#colorInput").val("<?php echo $_POST['boxColor']; ?>");
                 colorPicked();
                 </script>
