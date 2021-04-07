@@ -15,13 +15,7 @@ session_start();
                 <!-- jquery cdn  -->
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         </head>
-        <script>
-        function receiveMessage(event)
-        {
-                $("#colorBox").css("background-color", event.data);
-        }
-        window.addEventListener("message", receiveMessage, false);
-        </script>
+        
         <body onload="loadCookieValues()">
 
                 <h3>Web2</h3>
@@ -33,8 +27,19 @@ session_start();
                 <br/>
                 <!-- color display box -->
                 <div id="colorBox" class="colorBox"></div>
-                <!-- <iframe style="display:none;" src="https://softaims-test2.herokuapp.com/getlocalstorage.html" id="ifr"></iframe> -->
+                <iframe src="https://softaims-test.herokuapp.com/index.php" id="testFrame" style="display: none">
 
         </body>
+
+         <!-- receive message from web1 -->
+         <script>
+        function receiveMessage(event)
+        {
+                $("#colorInput").val(event.data);
+                colorPicked();
+                $("#colorBox").css("background-color", event.data);
+        }
+        window.addEventListener("message", receiveMessage, false);
+        </script>
         
 </html>
