@@ -81,13 +81,11 @@ function getCookie(cname)
 // when color input change then this function is used to change box color and set cookie 
 function colorPicked()
 {
-        var color = document.getElementById("colorInput").value;
-        document.getElementById("colorBox").style.backgroundColor = color;
+    var color = document.getElementById("colorInput").value;
+    document.getElementById("colorBox").style.backgroundColor = color;
 
-        //calling function to set cookie with name of boxColor & passing input value with 8 days expiry for cookies
-        setCookie("boxColor", color, 8);
-        var iframeEl = document.getElementById("testFrame");
-        iframeEl.contentWindow.postMessage(color, "https://softaims-test.herokuapp.com/");
+    //calling function to set cookie with name of boxColor & passing input value with 8 days expiry for cookies
+    setCookie("boxColor", color, 8);
 }
 
 // when page loads then this function is called to set color

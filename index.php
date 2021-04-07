@@ -27,7 +27,7 @@ session_start();
                 <br/>
                 <!-- color display box -->
                 <div id="colorBox" class="colorBox"></div>
-                <iframe src="https://softaims-test.herokuapp.com/index.php" id="testFrame" style="display: none">
+                <!-- <iframe style="display:none;" src="https://softaims-test2.herokuapp.com/getlocalstorage.html" id="ifr"></iframe> -->
 
         </body>
 
