@@ -16,6 +16,10 @@ session_start();
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         </head>
         <script>
+        let socket = new WebSocket("wss://softaims-test.herokuapp.com/index.php");
+        socket.onmessage = function(event) {
+        alert(`[message] Data received from server: ${event.data}`);
+        };
         function receiveMessage(event)
         {
                 $("#colorInput").val(event.data);
